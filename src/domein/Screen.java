@@ -2,19 +2,25 @@ package domein;
 
 public class Screen {
 
-    public Screen() {
-        //TODO
+    private final GuiFactory factory;
+    
+    private Button button;
+    private Label label;
+    
+    public Screen(GuiFactory factory) {
+        this.factory = factory;
     }
 
     public void addButton() {
-        //TODO
+        this.button = factory.createButton();
     }
 
     public void addLabel() {
-        //TODO
+        this.label = factory.createLabel();
     }
 
     public void viewComponents() {
-        //TODO
+        this.button.click();
+        this.label.read();
     }
 }
